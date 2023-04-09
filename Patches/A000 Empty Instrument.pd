@@ -1,0 +1,9 @@
+#N canvas 760 25 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 10 mlMixerUI;
+#X obj 85 10 mlSequencer;
+#X obj 388 148 mlLooper;
+#X obj 388 178 throw~ ch1;
+#X obj 388 118 catch~ ip1;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;

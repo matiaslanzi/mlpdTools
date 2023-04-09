@@ -1,0 +1,43 @@
+#N canvas 575 189 900 640 12;
+#X obj 97 11 mlSequencer;
+#X obj 836 19 mlHelp;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array pitches 16 float 3;
+#A 0 60 62 64 65 67 69 71 72 74 76 77 79 81 83 84 0;
+#X coords 0 1 16 127 200 140 1 0 0;
+#X restore 333 100 graph;
+#X msg 333 313 \; pitches const 0 \;;
+#X obj 44 179 array get pitches;
+#X floatatom 44 203 5 0 0 0 - - - 0;
+#X obj 44 370 mlSynth;
+#X obj 44 129 hradio 15 1 0 16 empty empty empty 0 -8 0 10 #485034
+#a0cc40 #000000 0;
+#X obj 44 330 spigot;
+#X obj 83 306 > 0;
+#X obj 44 282 t f f;
+#X text 116 306 Gate if note is < 0;
+#X obj 333 275 array set pitches;
+#X msg 333 249 60 62 64 65 67 69 71 72 74 76 77 79 81 83 84;
+#X obj 44 241 - 24;
+#X text 86 240 transpose;
+#X text 85 110 Steps;
+#X obj 197 49 bng 35 250 50 0 transStart empty start 3 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 242 49 bng 35 250 50 0 transStop empty stop 6 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 152 49 bng 35 250 50 0 transHome empty home 5 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 18 11 mlMixerUI;
+#X obj 44 89 r metroStep;
+#X obj 44 410 throw~ ch1;
+#X connect 4 0 5 0;
+#X connect 5 0 14 0;
+#X connect 6 0 22 0;
+#X connect 7 0 4 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;
+#X connect 10 1 9 0;
+#X connect 13 0 12 0;
+#X connect 14 0 10 0;
+#X connect 21 0 7 0;

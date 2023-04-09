@@ -1,0 +1,19 @@
+#N canvas 386 44 483 567 12;
+#X text 2 3 csmlHelp;
+#X text 13 44 csmlTools is a set of abstractions for Pd that allows
+for fast prototyping and creation of audio applicatoins such as synthesizers
+\, saplers \, audio players \, groove boxes \, etc with Pure data.
+The base of all is the mlSetup object.;
+#X text 13 124 ----- mlSetup ----- Starts by sending the "init" symbol.
+Use [r init] to bang any needed initialization in any patch that conntains
+mlSetup. After 500 ms starts the DSP engine. It defines [pd audioIO]
+\, define here your channels \, masters and any busses. The default
+is 8 channels and 1 stereo master.;
+#X text 13 214 ----- mlChannel ----- This abstraction defines a channel
+by catching chan\$1 as an input \, controlling its amplitud and panning
+and creating VU data sent to vuChan\$1. Amplitud can be controlled
+with volChan\$1 symbol and panning can be controlled with panCHan\$1
+symbol.;
+#X text 66 340 TODO: fix panner TODO: Include scope in interface TODO:
+Make a recorder TODO: Add save and load sample functionality for the
+samplers and loopers. TODO:;

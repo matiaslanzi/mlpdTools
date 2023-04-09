@@ -1,0 +1,28 @@
+#N canvas 1297 237 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 10 mlMixerUI;
+#X obj 85 10 mlSequencer;
+#X obj 145 111 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 142 141 osc~;
+#X obj 142 235 +~ 1;
+#X obj 142 259 *~ 50;
+#X obj 142 283 tabread~ \$0-shape;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array \$0-shape 100 float 0;
+#X coords 0 -1 99 1 100 100 1 0 0;
+#X restore 14 110 graph;
+#X obj 142 313 throw~ ch1;
+#X obj 142 211 *~;
+#X floatatom 150 164 5 0 1 0 - - - 0;
+#X obj 160 187 vline~;
+#X msg 190 164 1 20 \, 0 1000 20;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 10 0 5 0;
+#X connect 11 0 12 0;
+#X connect 12 0 10 1;
+#X connect 13 0 12 0;

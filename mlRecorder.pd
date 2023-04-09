@@ -1,0 +1,30 @@
+#N canvas 752 108 945 861 12;
+#X text 5 4 mlRecorder;
+#X msg 151 208 open tempAudio.wav;
+#X msg 161 290 start;
+#X msg 211 290 stop;
+#X msg 161 237 bang;
+#X obj 211 267 del 1000;
+#X msg 218 319 2;
+#X obj 151 349 writesf~ 2;
+#X obj 19 287 inlet~ r;
+#X obj 85 289 inlet~ l;
+#X text 281 267 <-- recording time;
+#X obj 160 152 bng 40 250 50 0 empty empty Rec 9 20 0 12 -258113 -1
+-1;
+#X obj 211 152 bng 40 250 50 0 empty empty Stop 6 20 0 12 -228856 -66577
+-1;
+#X floatatom 225 110 5 0 60000 0 milliseconds - -;
+#X connect 1 0 7 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 1;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 11 0 4 0;
+#X connect 12 0 3 0;
+#X connect 13 0 5 1;
+#X coords 0 -1 1 1 200 100 2 100 100;

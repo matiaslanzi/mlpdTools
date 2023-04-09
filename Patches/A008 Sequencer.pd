@@ -1,0 +1,54 @@
+#N canvas 595 191 900 640 12;
+#X obj 83 11 mlSequencer;
+#X obj 836 19 mlHelp;
+#X obj 94 105 select 0 1 2 3;
+#X obj 94 129 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 117 129 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 141 129 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 165 129 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X floatatom 164 209 5 0 0 0 - - - 0;
+#X floatatom 187 189 5 0 0 0 - - - 0;
+#X floatatom 211 169 5 0 0 0 - - - 0;
+#X floatatom 235 149 5 0 0 1 MIDI\ Note - - 0;
+#X obj 138 251 mlKick;
+#X obj 13 208 mlHat;
+#X obj 312 56 bng 35 250 50 0 transStart empty start 3 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 357 56 bng 35 250 50 0 transStop empty stop 6 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 267 56 bng 35 250 50 0 transHome empty home 5 17 0 10 #fcfcfc
+#000000 #000000;
+#X obj 94 56 r metroStep;
+#X floatatom 94 76 5 0 0 0 - - - 0;
+#X obj 286 234 mlSynth;
+#X obj 11 10 mlMixerUI;
+#X obj 13 232 throw~ ch3;
+#X obj 138 275 throw~ ch2;
+#X obj 286 263 throw~ ch1;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 2 3 6 0;
+#X connect 3 0 7 0;
+#X connect 3 0 11 0;
+#X connect 3 0 12 0;
+#X connect 4 0 8 0;
+#X connect 4 0 12 0;
+#X connect 5 0 9 0;
+#X connect 5 0 11 0;
+#X connect 5 0 12 0;
+#X connect 6 0 10 0;
+#X connect 6 0 12 0;
+#X connect 7 0 18 0;
+#X connect 8 0 18 0;
+#X connect 9 0 18 0;
+#X connect 10 0 18 0;
+#X connect 11 0 21 0;
+#X connect 12 0 20 0;
+#X connect 16 0 17 0;
+#X connect 17 0 2 0;
+#X connect 18 0 22 0;

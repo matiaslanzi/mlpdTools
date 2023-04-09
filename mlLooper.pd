@@ -1,0 +1,65 @@
+#N canvas 641 105 541 451 12;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array sData 441000 float 2;
+#X coords 0 1 441000 -1 200 100 1 0 0;
+#X restore 323 107 graph;
+#X msg 44 117 start;
+#X msg 93 118 stop;
+#X obj 147 63 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 179 63 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 147 6 tgl 15 0 empty empty Rec 17 7 0 10 #fcfcfc #000000 #bbbbbb
+0 1;
+#X obj 147 34 sel 1;
+#X obj 147 89 timer;
+#X floatatom 147 119 5 0 0 0 - - - 0;
+#X obj 147 241 phasor~;
+#X obj 147 301 *~;
+#X obj 165 268 * 44.1;
+#X obj 147 148 t f f;
+#X obj 147 182 expr 1000 / $f1;
+#X msg 159 211 0;
+#X obj 256 6 bng 15 250 50 0 empty empty Play 17 7 0 10 #fcfcfc #000000
+#dfdfdf;
+#X msg 199 211 0;
+#X obj 9 69 inlet~ ip1;
+#X obj 210 6 bng 15 250 50 0 empty empty Stop 17 7 0 10 #fcfcfc #000000
+#dfdfdf;
+#X obj 306 6 bng 15 250 50 0 empty empty Clear 17 7 0 10 #fcfcfc #000000
+#dfdfdf;
+#X msg 307 42 0;
+#X obj 147 361 outlet~ op4;
+#X obj 10 148 tabwrite~ sData;
+#X msg 337 261 \; sData normalize \;;
+#X obj 147 331 tabread4~ sData;
+#X msg 351 39 \; sData const 0;
+#X connect 1 0 22 0;
+#X connect 2 0 22 0;
+#X connect 3 0 1 0;
+#X connect 3 0 7 0;
+#X connect 4 0 2 0;
+#X connect 4 0 7 1;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 4 0;
+#X connect 7 0 8 0;
+#X connect 8 0 12 0;
+#X connect 9 0 10 0;
+#X connect 10 0 24 0;
+#X connect 11 0 10 1;
+#X connect 12 0 13 0;
+#X connect 12 1 11 0;
+#X connect 13 0 9 0;
+#X connect 14 0 9 0;
+#X connect 15 0 13 0;
+#X connect 15 0 16 0;
+#X connect 16 0 9 1;
+#X connect 17 0 22 0;
+#X connect 18 0 14 0;
+#X connect 19 0 14 0;
+#X connect 19 0 20 0;
+#X connect 19 0 25 0;
+#X connect 20 0 8 0;
+#X connect 24 0 21 0;
+#X connect 24 0 22 0;

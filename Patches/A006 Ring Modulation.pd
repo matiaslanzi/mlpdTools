@@ -1,0 +1,34 @@
+#N canvas 763 327 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 10 mlMixerUI;
+#X obj 139 155 osc~;
+#X obj 142 101 hsl 50 15 0 1500 0 0 empty empty Freq -2 -8 0 10 #c6ffc7
+#000000 #bbbbbb 0 1;
+#X floatatom 139 126 5 0 0 0 - - - 0;
+#X obj 139 214 *~;
+#X obj 139 185 *~;
+#X text 384 173 Modulate an audio file with another amplitud modulation?
+;
+#X obj 239 135 osc~;
+#X obj 242 81 hsl 50 15 0 1500 0 0 empty empty Freq -2 -8 0 10 #c6ffc7
+#000000 #bbbbbb 0 1;
+#X floatatom 239 106 5 0 0 0 - - - 0;
+#X obj 299 135 osc~;
+#X obj 302 81 hsl 50 15 0 1500 0 0 empty empty Freq -2 -8 0 10 #c6ffc7
+#000000 #bbbbbb 0 1;
+#X floatatom 299 106 5 0 0 0 - - - 0;
+#X text 137 65 carrier;
+#X text 238 44 mod1;
+#X text 295 44 mod2;
+#X obj 139 264 throw~ ch1;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 17 0;
+#X connect 6 0 5 0;
+#X connect 8 0 6 1;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 5 1;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;

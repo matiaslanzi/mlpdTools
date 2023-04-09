@@ -1,0 +1,15 @@
+#N canvas 157 892 350 169 12;
+#X obj 8 22 catch~ scope;
+#X obj 8 123 tabwrite~ buffer;
+#N canvas 411 436 450 278 (subpatch) 0;
+#X array buffer 1024 float 4;
+#X coords 0 1 1023 -1 200 140 1 0 0;
+#X restore 135 18 graph;
+#X msg 24 93 start;
+#X obj 23 48 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 24 69 metro 30;
+#X connect 0 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;

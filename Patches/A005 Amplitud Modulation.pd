@@ -1,0 +1,40 @@
+#N canvas 565 280 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 11 mlMixerUI;
+#X obj 344 108 osc~;
+#X floatatom 344 79 5 0 0 0 - - - 0;
+#X obj 347 57 hsl 60 15 0 30 0 0 empty empty empty -2 -8 0 10 #c6ffc7
+#000000 #000000 0 1;
+#X obj 237 213 osc~;
+#X floatatom 237 184 5 0 0 0 - - - 0;
+#X obj 240 158 hsl 60 15 0 1500 0 0 empty empty empty -2 -8 0 10 #c6ffc7
+#000000 #000000 0 1;
+#X obj 344 138 mlUnipolar;
+#X obj 237 253 *~;
+#X text 238 132 carrier;
+#X text 343 31 modulator;
+#X obj 453 62 hsl 60 15 0 1 0 0 empty empty empty -2 -8 0 10 #c6ffc7
+#000000 #000000 0 1;
+#X text 500 11 Amount;
+#X floatatom 582 112 5 0 0 0 - - - 0;
+#X obj 582 135 phasor~;
+#X text 576 84 envelope;
+#X obj 344 168 +~;
+#X floatatom 453 131 5 0 0 0 - - - 0;
+#X floatatom 450 82 5 0 0 0 - - - 0;
+#X obj 453 107 expr 1 - $f1;
+#X obj 238 314 throw~ ch1;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 17 0;
+#X connect 9 0 21 0;
+#X connect 12 0 19 0;
+#X connect 14 0 15 0;
+#X connect 17 0 9 1;
+#X connect 18 0 17 1;
+#X connect 19 0 20 0;
+#X connect 20 0 18 0;

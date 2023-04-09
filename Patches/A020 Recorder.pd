@@ -1,0 +1,12 @@
+#N canvas 306 109 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 340 256 catch~ ip1;
+#X obj 447 260 catch~ ip2;
+#X obj 319 320 throw~ chan1;
+#X obj 462 316 throw~ chan2;
+#X obj 361 294 mlRecorder;
+#X obj 6 10 mlMixerUI;
+#X connect 1 0 5 0;
+#X connect 1 0 3 0;
+#X connect 2 0 5 1;
+#X connect 2 0 4 0;

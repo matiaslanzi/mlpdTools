@@ -1,0 +1,16 @@
+#N canvas 612 217 186 280 12;
+#X obj 39 39 mlVU;
+#X obj 21 189 *~;
+#X msg 39 129 \$1 15;
+#X obj 39 159 line~;
+#X obj 21 219 throw~ ip\$1;
+#X obj 22 9 adc~ \$1;
+#X obj 39 99 r volIp\$1;
+#X obj 39 69 s vuIp\$1;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 1;
+#X connect 5 0 0 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;

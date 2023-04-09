@@ -1,0 +1,55 @@
+#N canvas 1118 198 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 10 mlMixerUI;
+#X obj 85 10 mlSequencer;
+#X obj 36 190 throw~ ch1;
+#X floatatom 36 113 5 0 0 0 - - - 0;
+#X obj 36 136 osc~;
+#X text 47 78 Square Wave;
+#X obj 36 160 expr~ if($v1 > $f2 \, 1 \, -1);
+#X floatatom 215 131 5 -0.99 0.99 1 Pulse\ width - - 0;
+#X obj 39 328 phasor~;
+#X obj 39 388 throw~ ch2;
+#X floatatom 39 299 5 0 0 0 - - - 0;
+#X obj 39 358 mlBipolar;
+#X text 36 271 Square Saw tooth wave;
+#X obj 471 139 phasor~;
+#X floatatom 471 110 5 0 0 0 - - - 0;
+#X obj 471 163 expr~ if($v1 > 0.5 \, 1 - $v1 \, $v1);
+#X obj 471 241 throw~ ch3;
+#X obj 471 187 *~ 4;
+#X obj 471 211 -~ 1;
+#X text 468 73 Triangle Wave;
+#X text 460 282 Wave table;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array waveform1 259 float 3;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#X coords 0 1 259 -1 200 140 1;
+#X restore 592 315 graph;
+#X obj 445 379 tabosc4~ waveform1;
+#X floatatom 445 350 5 0 0 0 - - - 0;
+#X obj 445 409 throw~ ch4;
+#X msg 622 477 \; waveform1 const 0;
+#X msg 620 525 \; waveform1 sinesum 256 1 0.5 0.25 \; waveform1 normalize
+;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 7 1;
+#X connect 9 0 12 0;
+#X connect 11 0 9 0;
+#X connect 12 0 10 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 0;
+#X connect 16 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 0;

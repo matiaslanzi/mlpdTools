@@ -1,0 +1,26 @@
+#N canvas 482 291 900 640 12;
+#X obj 836 19 mlHelp;
+#X obj 12 10 mlMixerUI;
+#X obj 85 10 mlSequencer;
+#X obj 152 120 noise~;
+#X obj 152 170 bp~ 1000 5;
+#X obj 188 144 hsl 60 15 100 5000 0 0 empty empty empty -2 -8 0 10
+#403f33 #a0cf42 #bbbbbb 0 1;
+#X obj 364 102 noise~;
+#X obj 364 242 *~;
+#X obj 382 212 vline~;
+#X obj 364 152 bp~ 1000 5;
+#X obj 400 126 hsl 60 15 100 5000 0 0 empty empty empty -2 -8 0 10
+#403f33 #a0cf42 #bbbbbb 0 1;
+#X msg 382 182 1 \, 0 30;
+#X obj 152 200 throw~ ch1;
+#X obj 364 272 throw~ ch2;
+#X connect 3 0 4 0;
+#X connect 4 0 12 0;
+#X connect 5 0 4 1;
+#X connect 6 0 9 0;
+#X connect 7 0 13 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 10 0 9 1;
+#X connect 11 0 8 0;
