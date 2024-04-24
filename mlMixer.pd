@@ -1,4 +1,4 @@
-#N canvas 447 378 450 300 12;
+#N canvas 73 270 460 191 12;
 #X obj 265 11 mlChannel 1;
 #X obj 356 11 mlMaster 1;
 #X obj 188 11 mlInput 1;

@@ -1,58 +1,73 @@
-#N canvas 114 523 539 329 12;
+#N canvas 71 483 571 340 12;
 #X obj 8 8 mlMixer;
-#X obj 102 129 vsl 15 119 0 1 0 0 volCh1 fadVolCh1 ch1 14 -9 0 10 -128992
--162961 -162280 11800 1;
-#X obj 432 69 vsl 15 199 0 1.2 0 0 volMaster fadVolMaster empty 4 -9
-0 10 -128992 -162961 -162280 19800 1;
-#X obj 105 253 hsl 31 15 0.01 1 1 1 panCh1 fadPanCh1 empty -2 -8 0
-10 -128992 -162961 -1 3000 1;
-#X obj 436 277 hsl 50 15 0.01 1 1 0 balanceMaster empty empty -2 -8
-0 10 -128992 -162961 -1 0 1;
-#X obj 471 69 vu 15 200 vuMasterR R 4 -8 0 9 -66577 -99865 1 0;
-#X obj 452 69 vu 15 200 vuMasterL L 4 -8 0 9 -66577 -99865 0 0;
-#X obj 122 129 vu 15 120 vuCh1 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 69 69 vu 15 200 vuIp2 ip2 0 -8 0 9 -66577 -99865 0 0;
-#X obj 50 69 vu 15 200 vuIp1 ip1 0 -8 0 9 -66577 -99865 0 0;
-#X obj 142 129 vsl 15 119 0 1 0 0 volCh2 fadVolCh2 ch2 14 -9 0 10 -128992
--162961 -162280 11800 1;
-#X obj 145 253 hsl 31 15 0.01 1 1 0 panCh2 fadPanCh2 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 162 129 vu 15 120 vuCh2 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 182 129 vsl 15 119 0 1 0 0 volCh3 fadVolCh3 ch3 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 185 253 hsl 31 15 0.01 1 1 0 panCh3 fadPanCh4 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 202 129 vu 15 120 vuCh3 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 222 129 vsl 15 119 0 1 0 0 volCh4 fadVolCh4 ch4 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 225 253 hsl 31 15 0.01 1 1 0 panCh4 fadPanCh4 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 242 129 vu 15 120 vuCh4 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 262 129 vsl 15 119 0 1 0 0 volCh5 fadVolCh5 ch5 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 265 253 hsl 31 15 0.01 1 1 0 panCh5 fadPanCh5 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 282 129 vu 15 120 vuCh5 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 302 129 vsl 15 119 0 1 0 0 volCh6 fadVolCh6 ch6 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 305 253 hsl 31 15 0.01 1 1 0 panCh6 fadPanCh6 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 322 129 vu 15 120 vuCh6 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 342 129 vsl 15 119 0 1 0 0 volCh7 fadVolCh7 ch7 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 345 253 hsl 31 15 0.01 1 1 0 panCh7 fadPanCh7 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 362 129 vu 15 120 vuCh7 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 382 129 vsl 15 119 0 1 0 0 volCh8 fadVolCh8 ch8 14 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 385 253 hsl 31 15 0.01 1 1 0 panCh8 fadPanCh8 empty -2 -8 0
-10 -128992 -162961 -1 0 1;
-#X obj 402 129 vu 15 120 vuCh8 empty 4 -8 0 9 -66577 -99865 0 0;
-#X obj 9 69 vsl 15 199 0 1 0 0 volIp1 fadVolIp empty 4 -9 0 10 -128992
--162961 -162280 0 1;
-#X obj 29 69 vsl 15 199 0 1 0 0 volIp2 fadVolIp empty 4 -9 0 10 -128992
--162961 -162280 0 1;
+#X obj 102 129 vsl 15 119 0 1 0 0 volCh1 fadVolCh1 ch1 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 432 69 vsl 15 199 0 1.2 0 0 volMaster fadVolMaster empty 4 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 105 253 hsl 31 15 0.01 1 1 1 panCh1 fadPanCh1 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 3000 1;
+#X obj 436 277 hsl 50 15 0.01 1 1 0 balanceMaster empty empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 471 69 vu 15 200 vuMasterR R 4 -8 0 9 #404040 #606060 1 0;
+#X obj 452 69 vu 15 200 vuMasterL L 4 -8 0 9 #404040 #606060 0 0;
+#X obj 122 129 vu 15 120 vuCh1 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 69 69 vu 15 200 vuIp2 ip2 0 -8 0 9 #404040 #606060 0 0;
+#X obj 50 69 vu 15 200 vuIp1 ip1 0 -8 0 9 #404040 #606060 0 0;
+#X obj 142 129 vsl 15 119 0 1 0 0 volCh2 fadVolCh2 ch2 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 145 253 hsl 31 15 0.01 1 1 0 panCh2 fadPanCh2 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 162 129 vu 15 120 vuCh2 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 182 129 vsl 15 119 0 1 0 0 volCh3 fadVolCh3 ch3 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 185 253 hsl 31 15 0.01 1 1 0 panCh3 fadPanCh4 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 202 129 vu 15 120 vuCh3 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 222 129 vsl 15 119 0 1 0 0 volCh4 fadVolCh4 ch4 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 225 253 hsl 31 15 0.01 1 1 0 panCh4 fadPanCh4 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 242 129 vu 15 120 vuCh4 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 262 129 vsl 15 119 0 1 0 0 volCh5 fadVolCh5 ch5 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 265 253 hsl 31 15 0.01 1 1 0 panCh5 fadPanCh5 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 282 129 vu 15 120 vuCh5 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 302 129 vsl 15 119 0 1 0 0 volCh6 fadVolCh6 ch6 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 305 253 hsl 31 15 0.01 1 1 0 panCh6 fadPanCh6 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 322 129 vu 15 120 vuCh6 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 342 129 vsl 15 119 0 1 0 0 volCh7 fadVolCh7 ch7 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 345 253 hsl 31 15 0.01 1 1 0 panCh7 fadPanCh7 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 362 129 vu 15 120 vuCh7 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 382 129 vsl 15 119 0 1 0 0 volCh8 fadVolCh8 ch8 14 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 385 253 hsl 31 15 0.01 1 1 0 panCh8 fadPanCh8 empty -2 -8 0 10 #7c7c7c #9cc840 #000000 0 1;
+#X obj 402 129 vu 15 120 vuCh8 empty 4 -8 0 9 #404040 #606060 0 0;
+#X obj 9 69 vsl 15 199 0 1 0 0 volIp1 fadVolIp1 empty 4 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
+#X obj 29 69 vsl 15 199 0 1 0 0 volIp2 fadVolIp2 empty 4 -9 0 10 #7c7c7c #9cc840 #9c9c9c 0 1;
 #X obj 105 7 mlScopeUI;
 #X text 443 33 DAC;
 #X text 31 33 ADC;
 #X obj 429 7 mlCPULoad;
+#X obj 695 148 netreceive -u -b;
+#X obj 695 178 oscparse;
+#X msg 695 98 listen 8000;
+#X msg 791 98 listen 0;
+#X obj 695 208 list trim;
+#X obj 694 236 route in1 in2 ch1 ch2 ch3 ch4 ch5 ch6 ch7 ch8 master;
+#X obj 706 21 r init;
+#X obj 633 313 s fadVolIp1;
+#X obj 748 455 s fadVolCh1;
+#X obj 666 346 s fadVolIp2;
+#X obj 810 411 s fadVolCh3;
+#X obj 846 390 s fadVolCh4;
+#X obj 891 368 s fadVolCh5;
+#X obj 928 345 s fadVolCh6;
+#X obj 951 325 s fadVolCh7;
+#X obj 983 302 s fadVolCh8;
+#X obj 1023 278 s fadVolMaster;
+#X obj 789 438 s fadVolCh2;
+#X connect 37 0 38 0;
+#X connect 38 0 41 0;
+#X connect 39 0 37 0;
+#X connect 40 0 37 0;
+#X connect 41 0 42 0;
+#X connect 42 0 44 0;
+#X connect 42 1 46 0;
+#X connect 42 2 45 0;
+#X connect 42 3 54 0;
+#X connect 42 4 47 0;
+#X connect 42 5 48 0;
+#X connect 42 6 49 0;
+#X connect 42 7 50 0;
+#X connect 42 8 51 0;
+#X connect 42 9 52 0;
+#X connect 42 10 53 0;
+#X connect 43 0 39 0;
