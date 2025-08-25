@@ -1,0 +1,75 @@
+# patch-canvas-theme-plugin.tcl
+# Make Pd's patcher canvases dark too (not just the Pd console).
+# Safe: wraps canvas creation and themes existing + future patch windows.
+
+namespace eval ::pd_guiplugin {
+    variable BG "#5b5b5b"   ;# canvas (document) background
+    variable FG "#2d2d2dff"   ;# general foreground text (console/dialogs)
+    variable SEL "#00ff88"  ;# selection highlight
+
+    proc init {} {
+        # 1) Theme general Tk widgets (Pd console, menus, dialogs)
+        catch {tk_setPalette \
+            background "#b5b5b5" \
+            foreground "#000000" \
+            selectBackground "#000000" \
+            selectForeground "#000000" \
+            activeBackground "#2a2a2a" \
+            activeForeground "#adadad" \
+            highlightColor "#00ff88"}
+
+        # 2) Try Pd's simple theme message if your build supports it (bg, fg, selection)
+        if {[llength [info commands pdsend]]} {
+            catch {pdsend [format {pd colors %s %s %s} \
+                $::pd_guiplugin::BG $::pd_guiplugin::FG $::pd_guiplugin::SEL]}
+        }
+
+        # 3) Theme any already-open patcher canvases
+        ::pd_guiplugin::theme_all_patch_canvases
+
+        # 4) Wrap Pd's canvas-creation proc so new patches get themed automatically
+        if {[info procs ::pdtk_canvas_new] ne "" && [info procs ::pdtk_canvas_new_real] eq ""} {
+            rename ::pdtk_canvas_new ::pdtk_canvas_new_real
+            proc ::pdtk_canvas_new {args} {
+                # Call the real creator
+                set r [uplevel 1 [list ::pdtk_canvas_new_real] $args]
+                # args[0] is the toplevel window name (patch window)
+                set top [lindex $args 0]
+                if {$top ne ""} {
+                    after 0 [list ::pd_guiplugin::theme_canvas $top]
+                }
+                return $r
+            }
+        }
+    }
+
+    proc theme_all_patch_canvases {} {
+        # Pd patch windows are toplevels whose child canvas is usually "$top.c"
+        foreach w [winfo children .] {
+            if {[winfo class $w] eq "Toplevel"} {
+                ::pd_guiplugin::theme_canvas $w
+            }
+        }
+    }
+
+    proc theme_canvas {top} {
+        if {![winfo exists $top]} { return }
+        set c "$top.c"
+        if {![winfo exists $c]} { return }
+        # Set the document background
+        catch {$c configure -background $::pd_guiplugin::BG}
+
+        # Optional: make the selection rectangle visible in dark mode if present
+        # (Pd tags selection items inconsistently across versions, so be defensive.)
+        foreach id [$c find withtag current_selection] {
+            catch {$c itemconfigure $id -outline $::pd_guiplugin::SEL -fill ""}
+        }
+        # You can add more fine-grained item tweaks here if you discover stable tags in your Pd version.
+    }
+
+    # Many builds call this; we use it if available.
+    proc pdtk_pd_startup {} { ::pd_guiplugin::init }
+}
+
+# Fallback: ensure we run even if Pd doesn't call our startup hook
+after 0 {::pd_guiplugin::init}
