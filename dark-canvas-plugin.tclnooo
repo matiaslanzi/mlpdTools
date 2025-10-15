@@ -3,20 +3,24 @@
 # Safe: wraps canvas creation and themes existing + future patch windows.
 
 namespace eval ::pd_guiplugin {
-    variable BG "#5b5b5b"   ;# canvas (document) background
-    variable FG "#2d2d2dff"   ;# general foreground text (console/dialogs)
-    variable SEL "#00ff88"  ;# selection highlight
+    variable BG "#aaaaaa"   ;# canvas (document) background
+    variable FG "#000000"   ;# general foreground text (console/dialogs)
+    variable SEL "#00ff00"  ;# selection highlight
+
+set ::pd_colors(obj_box_fill)    "white"
+set ::pd_colors(obj_box_outline) "black"
+set ::pd_colors(obj_box_text)    "#000000"
 
     proc init {} {
         # 1) Theme general Tk widgets (Pd console, menus, dialogs)
         catch {tk_setPalette \
-            background "#b5b5b5" \
+            background "#aaaaaa" \
             foreground "#000000" \
-            selectBackground "#000000" \
+            selectBackground "#aaaaaa" \
             selectForeground "#000000" \
-            activeBackground "#2a2a2a" \
-            activeForeground "#adadad" \
-            highlightColor "#00ff88"}
+            activeBackground "#aaaaaa" \
+            activeForeground "#000000" \
+            highlightColor "#0000ff"}
 
         # 2) Try Pd's simple theme message if your build supports it (bg, fg, selection)
         if {[llength [info commands pdsend]]} {
