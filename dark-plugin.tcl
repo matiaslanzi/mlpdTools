@@ -14,18 +14,18 @@ namespace eval dark_canvas_theme {
     # WARM & COZY COLOR PALETTE
     #==========================================================================
     # Main theme colors - warm dark palette with amber/orange accents
-    variable color_bg           #1a1612    ; # Rich dark brown background
-    variable color_fg           #e8b886    ; # Warm amber text
-    variable color_hl_bg        #3d2914    ; # Warm brown highlight background
-    variable color_hl_fg        #f4d2a7    ; # Light cream highlight text
+    variable color_bg           #465c48    ; # Rich dark brown background
+    variable color_fg           #53ff04    ; # Warm amber text
+    variable color_hl_bg        #159081    ; # Warm brown highlight background
+    variable color_hl_fg        #3cf758    ; # Light cream highlight text
     variable color_insert       #ffaa44    ; # Bright orange cursor
     variable color_sel          #d4691d    ; # Burnt orange selection
-    variable color_debug        #90c695    ; # Soft green for debug info
+    variable color_debug        #cc9b68    ; # Soft green for debug info
     
     # Accent colors for special elements
     variable color_inlet        #c97064    ; # Warm coral for inlets
-    variable color_outlet       #8b956d    ; # Sage green for outlets
-    variable color_connection   #b5834a    ; # Golden brown for connections
+    variable color_outlet       #7c913d    ; # Sage green for outlets
+    variable color_connection   #a237f3    ; # Golden brown for connections
     
     # Console/Log window colors
     variable color_log_fatal_fg #ff6b6b    ; # Bright red for fatal errors
@@ -34,7 +34,7 @@ namespace eval dark_canvas_theme {
     variable color_log_normal   $color_fg   ; # Normal text uses main foreground
     variable color_log_normal_sel_fg #2c1810 ; # Dark text on light selection
     variable color_log_debug    #a8a070    ; # Muted yellow for debug
-    variable color_log_verbose  #7a6f5a    ; # Dim brown for verbose output
+    variable color_log_verbose  #987238    ; # Dim brown for verbose output
     variable color_log_sel_bg   $color_hl_bg ; # Use main highlight for selection
     
     # System theme detection (for future compatibility)
