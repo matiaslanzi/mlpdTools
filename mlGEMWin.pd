@@ -1,0 +1,13 @@
+#N canvas 1039 490 387 194 12;
+#X declare -lib Gem;
+#X obj 10 9 declare -lib Gem;
+#X obj 9 155 gemwin;
+#X msg 23 91 create \, 1;
+#X msg 51 122 0 \, destroy;
+#X obj 10 37 loadbang;
+#X msg 11 63 dimen 1920 1080;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 2 0;

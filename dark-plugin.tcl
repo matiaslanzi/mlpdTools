@@ -14,12 +14,12 @@ namespace eval dark_canvas_theme {
     # WARM & COZY COLOR PALETTE
     #==========================================================================
     # Main theme colors - warm dark palette with amber/orange accents
-    variable color_bg           #465c48    ; # Rich dark brown background
-    variable color_fg           #53ff04    ; # Warm amber text
+    variable color_bg           #607b62    ; # Rich dark brown background
+    variable color_fg           #000000    ; # Warm amber text
     variable color_hl_bg        #159081    ; # Warm brown highlight background
     variable color_hl_fg        #3cf758    ; # Light cream highlight text
-    variable color_insert       #ffaa44    ; # Bright orange cursor
-    variable color_sel          #d4691d    ; # Burnt orange selection
+    variable color_insert       #ffead1    ; # Bright orange cursor
+    variable color_sel          #ffceaa    ; # Burnt orange selection
     variable color_debug        #cc9b68    ; # Soft green for debug info
     
     # Accent colors for special elements
